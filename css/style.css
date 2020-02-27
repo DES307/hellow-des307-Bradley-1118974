@@ -1,1 +1,14 @@
 
+.btn-primary {
+    background-color: orange;
+    border: solid 1px red;
+}
+
+.btn-primary:hover {
+    background-color: yellow;
+    border: solid 1px orange;
+}
+
+.button {
+    margin-bottom: 20px;
+}
