@@ -34,24 +34,34 @@
 
 // console.log(person.address.city);
 
-// const me = {
-//     firstName: 'Brad',
-//     lastName: 'Hart',
-//     age: 24,
-//     gender: 'male',
-//     hobbies: ['movie', ' gaming', ' motorsport'],
-//     address: {
-//         number: 4,
-//         street: 'Esprit',
-//         city: 'Birtinya',
-//         postcode: 4575,
-//         state: 'QLD'
-//     }
-// };
+const me = {
+    firstName: 'Brad',
+    lastName: 'Hart',
+    age: 24,
+    gender: 'male',
+    hobbies: ['movie', ' gaming', ' motorsport'],
+    address: {
+        number: 4,
+        street: 'Esprit',
+        city: 'Birtinya',
+        postcode: 4575,
+        state: 'QLD'
+    }
+};
 
-// console.log(`My name is ${me.firstName} ${me.lastName}\nI am a ${me.age} year old ${me.gender}\nI live at: ${me.address.number} ${me.address.street}, ${me.address.city}, ${me.address.postcode}, ${me.address.state}\nMy hobbies are: ${me.hobbies}`)
-// console.log(me.hobbies[2].toUpperCase());
-// console.log(me.firstName.length);
+console.log(`My name is ${me.firstName} ${me.lastName}\nI am a ${me.age} year old ${me.gender}\nI live at: ${me.address.number} ${me.address.street}, ${me.address.city}, ${me.address.postcode}, ${me.address.state}\nMy hobbies are: ${me.hobbies}`)
+console.log(me.hobbies[2].toUpperCase());
+console.log(me.firstName.length);
+
+for (let i = 1; i < 4; i++) {
+    console.log(me.hobbies);
+}
+
+let arrayLength = me.hobbies.length;
+console.log(arrayLength);
+for (let i = 0; i < arrayLength; i++) {
+    console.log(`${me.hobbies}`);
+}
 
 // ------- if
 
