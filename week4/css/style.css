@@ -1,0 +1,33 @@
+.fa-apple-pay {
+    font-size: 30px;
+    margin-bottom: 0;
+    color: aqua;
+} 
+
+.heading {
+    background-color: brown;
+}
+
+.st {
+    background-color: yellow;
+}
+
+#hero {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 600px 600px;
+}
+
+/* Week 4 */
+.alert-success {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.space {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
