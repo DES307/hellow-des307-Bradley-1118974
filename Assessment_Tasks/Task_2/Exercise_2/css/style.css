@@ -1,3 +1,8 @@
+section {
+    margin-bottom: 50px;
+}
+
+/* ------ slider1 -------- */
 #slideshow .slick {
     width: 100%;
 }
@@ -6,3 +11,29 @@
     width: 100%;
     height: auto;
 }
+
+/* ------ slider2 -------- */
+#slideshow2 .slick2 {
+    width: 100%;
+}
+
+#slideshow2 img {
+    width: 100%;
+    height: auto;
+}
+
+/* ------ slider3 -------- */
+#slideshow3 .slick3 {
+    width: 100%;
+}
+
+#slideshow3 img {
+    width: 97%;
+    height: auto;
+}
+
+/* #slideshow3 .slick3:nth-child(odd) {
+    width: 300px;
+    height: auto;
+    border: solid 1px red;
+} */
