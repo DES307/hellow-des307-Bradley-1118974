@@ -1,12 +1,4 @@
 $(document).ready(() => {
-    // $('#slideshow .slick').slick( {
-    //     autoplay: true,
-    //     autoplaySpeed: 2000,
-    //     speed: 2000,
-    //     dots: true,
-    //     arrows: false,
-    // });
-
     $('.slick').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -14,8 +6,16 @@ $(document).ready(() => {
         autoplaySpeed: 2000,
         arrows: false,
         dots: true,
-      });
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1.
+            }
+          },
           
+        ]
+      });   
 });
 
 // -------- slider 2 -----------
@@ -31,19 +31,6 @@ $(document).ready(() => {
 });
 
 // -------- slider 3 -----------
-// $(document).ready(() => {
-//   $('.slick3').slick({
-//     dots: false,
-//     arrows: false,
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow: 3,
-//     autoplay: true,
-//     centerMode: true,
-//     variableWidth: true
-//   });
-// });
-
 $(document).ready(() => {
   $('.slick3').slick({
     centerMode: true,
@@ -74,7 +61,6 @@ $(document).ready(() => {
     ]
   });
 });
-
 
 // -------- notes -----------
 console.log('All images are sourced from Unsplash: https://unsplash.com');

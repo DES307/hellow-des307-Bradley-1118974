@@ -2,7 +2,16 @@ section {
     margin-bottom: 50px;
 }
 
+hr {
+    color: rgba(133, 133, 133, 0.3);
+    margin-bottom: 30px;
+}
+
 /* ------ slider1 -------- */
+#slideshow {
+    font-family: 'Indie Flower', cursive;
+}
+
 #slideshow .slick {
     width: 100%;
 }
@@ -19,13 +28,15 @@ section {
 }
 
 .slick-dots button {
-    border-radius: 20px;
-    border: solid 1px black;
+    border-radius: 50%;
+    border: solid 1px #23965b;
     padding: 5px 10px;
-    background-color: black;
+    background-color: #23965b;
     color: white;
     margin-right: 10px;
     cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.1em;
 }
 
 .slick-dots li.slick-active button {
@@ -33,6 +44,28 @@ section {
     background-color: white;
     box-shadow: 0.5px 0.5px 5px 0.5px rgba(000, 000, 000, 0.7);
     border: none;
+}
+
+#slideshow h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #23965b;
+    font-size: 30px;
+}
+
+.slick .relative {
+    position: relative;
+}
+
+.slick span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    border-radius: 10px;
 }
 
 /* ------ slider2 -------- */
@@ -45,7 +78,24 @@ section {
     height: auto;
 }
 
+#slideshow2 h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(43, 43, 43);
+    font-size: 30px;
+}
+
+#slideshow2 em {
+    font-size: 18px;
+    vertical-align: 10%;
+}
+
 /* ------ slider3 -------- */
+#slideshow3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
 #slideshow3 .slick3 {
     width: 100%;
 }
@@ -55,8 +105,87 @@ section {
     height: auto;
 }
 
-/* #slideshow3 .slick3:nth-child(odd) {
-    width: 300px;
-    height: auto;
-    border: solid 1px red;
-} */
+.slick3 .relative {
+    position: relative;
+    width: 100%;
+}
+
+.slick3 a {
+    position: absolute;
+    bottom: 15px;
+    right: 35px;
+    color: white;
+    background-color: salmon;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border: solid 2px salmon;
+}
+
+.slick3 a:hover {
+    background-color: white;
+    color: salmon;
+    cursor: pointer;
+    transition: background-color 1s;
+    transition: color 0.5s;
+}
+
+.slick3 .sold {
+    font-size: 12px;
+}
+
+#slideshow3 h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(72, 72, 72);
+    font-size: 30px;
+}
+
+/* ---------- media queries ------- */
+
+@media only screen and (max-width: 600px) {
+    #slideshow h1 {
+        font-size: 16px;
+    }
+
+    #slideshow .tag {
+        font-size: 12px;
+    }
+
+    /* s2 */
+
+    #slideshow2 h1 {
+        font-size: 16px;
+    }
+
+    /* s3 */
+
+    #slideshow3 h1 {
+        font-size: 16px;
+    }
+
+    .slick3 .relative a {
+        font-size: 12px;
+        right: 15px;
+        bottom: 5px;
+    }
+
+    .slick3 .relative .sold {
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 374px) {
+    #slideshow .tag {
+        display: none;
+    }
+
+    /* s2 */
+    
+    #slideshow2 em {
+        display: none;
+    }
+}
