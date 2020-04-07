@@ -24,7 +24,7 @@ function des307Fetch() {
                 rowToAdd = rowToAdd.concat('<td> '+ myData[i].first_name+' </td>');
                 rowToAdd = rowToAdd.concat('<td> '+ myData[i].last_name+' </td>');
                 rowToAdd = rowToAdd.concat('<td> '+ myData[i].email+' </td>');
-                rowToAdd = rowToAdd.concat('<td> <img src = "'+myData[i].avatar+'" </td>');
+                rowToAdd = rowToAdd.concat('<td> <img class="avatar" src = "'+myData[i].avatar+'"> </td>');
                 rowToAdd = rowToAdd.concat('</tr>');
                 document.getElementById("data-placeholder").innerHTML += rowToAdd;
             };
