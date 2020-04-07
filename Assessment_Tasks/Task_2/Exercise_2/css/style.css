@@ -12,6 +12,29 @@ section {
     height: auto;
 }
 
+.slick-dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots button {
+    border-radius: 20px;
+    border: solid 1px black;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+    color: black;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 5px 0.5px rgba(000, 000, 000, 0.7);
+    border: none;
+}
+
 /* ------ slider2 -------- */
 #slideshow2 .slick2 {
     width: 100%;

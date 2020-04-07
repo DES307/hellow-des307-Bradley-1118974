@@ -13,6 +13,7 @@ $(document).ready(() => {
         autoplay: true,
         autoplaySpeed: 2000,
         arrows: false,
+        dots: true,
       });
           
 });
@@ -24,6 +25,8 @@ $(document).ready(() => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 1500,
+    fade: true,
+    cssEase: 'linear',
   });
 });
 
@@ -47,6 +50,7 @@ $(document).ready(() => {
     centerPadding: '60px',
     slidesToShow: 3,
     autoplay: true,
+    autoplaySpeed: 1000,
     arrows: false,
     responsive: [
       {
