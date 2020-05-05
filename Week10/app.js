@@ -37,7 +37,7 @@ $(document).ready(function() {
        };
     });
 
-
+    // believe need to store outside of below function so it can keep storing the number as + is pressed and not be reset
     let tableRowId = 1;
 
     // let now = new Date(Date.now());
