@@ -1,36 +1,74 @@
-$(document).ready(function ($) {
-    $(".button").click(function () {
-        $.get("https://reqres.in/api/users?page=2", function (data, status) {
-            console.log(`Data: ${data} \nStatus: ${status}`);
-            display(data.data);
-        });
+// ------------------------- Week 10 --------------------
+
+$(document).ready(function() {
+
+    $('#show-message').click(function() {
+        $('.alert').slideDown();
     });
-});
 
-function display(data) {
-    console.log(data)
-    
-let convertedData = data;
-    
-    let rowToAdd = '';
-    for (let i = 0; i < convertedData.length; i++) {        
-        rowToAdd = rowToAdd.concat('<tr>');
-        rowToAdd = rowToAdd.concat('<th> ' + convertedData[i].id + ' </th>');
-        rowToAdd = rowToAdd.concat('<td> ' + convertedData[i].first_name + ' </td>');
-        rowToAdd = rowToAdd.concat('<td> ' + convertedData[i].last_name + ' </td>');
-        rowToAdd = rowToAdd.concat('<td> ' + convertedData[i].email + ' </td>');
-        rowToAdd = rowToAdd.concat('<td> <img class="avatar" src = "' + convertedData[i].avatar + '"> </td>');
-        rowToAdd = rowToAdd.concat('</tr>');
-    };
+    $('#hide-message').click(function() {
+        $('.alert').slideUp();
+    });
 
-         $('#data-placeholder').html(rowToAdd);
-};
 
-// --------------- Week 9 Example ----------
+    $('#plus').click(function() {
+        let number = $('.badge').text();
+        
+        number = parseInt(number) + 1;
 
-$(document).ready(function () {
+        $('.badge').text(number);
 
-    $('.button1').click(function () {
-        $('.replace').text("I am the new replacement")
-    })
+        if (number > 10) {
+            alert('You need to read your messages!');
+        };
+    });
+
+    $('#minus').click(function() {
+       let numberMinus = $('.badge').text();
+
+       numberMinus = parseInt(numberMinus) - 1;
+
+       $('.badge').text(numberMinus);
+
+       if (numberMinus < 0) {
+            numberMinus = 0;
+            $('.badge').text(numberMinus);
+            alert('You have no new messages')
+       };
+    });
+
+
+    let tableRowId = 1;
+
+    // let now = new Date(Date.now());
+    // let formatted = now.getHours() +':'+ now.getMinutes() +'.'+ now.getSeconds();
+
+    $('#addRow').click(function() {
+
+        // Date() method needs to be in function, to keep geting live time update
+        let time = new Date();
+        time = `${time.getHours()}:${time.getMinutes()}.${time.getSeconds()}`;
+        
+        let tempRow = `<tr id="table_row_${tableRowId}"><th>${tableRowId}</th>`;
+
+        tempRow = tempRow + `<td>${time}</td>`;
+        tempRow = tempRow + `<td><button id="row_${tableRowId}" type="button" class="btn btn-dark"><i class="fa fa-trash"></i></button></td></tr>`;
+
+        $('.table > tbody:last-child').append(tempRow);
+        tableRowId = tableRowId + 1;
+    });
+
+    // Wild Cards
+    //$('[id^=row_]') ^ starting with row_
+    //$('[id$=row_]') $ ending with row_
+
+    $(document).on('click', '[id^=row_]', function(event) {
+        let id = $(this).attr("id");
+
+        if (confirm("Are you sure you wish to delete"))
+            $('#table_' + id).remove();
+        else 
+            alert('You saved me from deleting my row');
+    });
+
 });
