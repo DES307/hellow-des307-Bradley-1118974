@@ -3,31 +3,31 @@ $(document).ready(function () {
     let tableRowId = 1;
 
     $('#addRow').click(function() {
-        console.log('hi');
+        let firstName = $("#first-name").val();
+        $("#first-name").val('');
+
+        let lastName = $('#last-name').val();
+        $('#last-name').val('');
+
         let addRow = '';
 
-        addRow = addRow + `<tr id='row_remove_${tableRowId}'><td>John</td>`;
-        addRow = addRow + `<td>Smith</td>`;
+        addRow = addRow + `<tr id='row_remove_${tableRowId}'><td>${firstName}</td>`;
+        addRow = addRow + `<td>${lastName}</td>`;
         addRow = addRow + `<td><button id='remove_${tableRowId}' type='button'><i class='fa fa-minus'></i></button></td></tr>`;
 
         $('table > #placeData').append(addRow);
 
         tableRowId = tableRowId + 1;
 
-        function noDisplay() {
-            let success = document.querySelector('.success'); 
+        let success = document.querySelector('.success'); 
 
-            success.innerHTML = `<p><span class="badge badge-success">Success</span></p>`;
-        }
-        setTimeout(noDisplay, 000);
-        clearTimeout(noDisplay, 2000);
-
+        success.innerHTML = `<div class="alert alert-success" role="alert">Success<button class="close" data-dismiss="alert" aria-label="close"><i class='fa fa-minus'></i></button></div>`;
     });
 
     $(document).on('click', '[id^=remove_]', function(event) {
         let id = $(this).attr("id");
 
-        if (confirm("Are you sure you wish to delete"))
+        if (confirm("Are you sure you wish to delete?"))
             $('#row_' + id).remove();
     });
 

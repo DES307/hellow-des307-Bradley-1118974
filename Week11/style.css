@@ -1,0 +1,42 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    animation-name: changeColor;
+    animation-duration: 2s;
+    /* animation-name: multiColor;
+    animation-duration: 4s; */
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+}
+
+@keyframes changeColor {
+    from {background-color: red;}
+    to {background-color: darkorange;}
+}
+
+@keyframes multiColor {
+    0% {background-color: red;}
+    25% {background-color: deepskyblue;}
+    50% {background-color: gold;}
+    75% {background-color: greenyellow;}
+    100% {background-color: indigo;}
+}
+
+.box2 {
+    width: 200px;
+    height: 50px;
+    border: solid 1px black;
+    margin-top: 50px;
+}
+
+.box2:hover {
+    animation-name: slide;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    from {background-color: white;}
+    to {background-color: black;}
+}
